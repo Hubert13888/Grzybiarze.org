@@ -1,0 +1,241 @@
+.home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .title_art {
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: #ddd 5px solid;
+
+    &:before {
+      position: fixed;
+      z-index: -2;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background: url("/assets/pictures/grzyb3.jpg") no-repeat;
+      background-size: cover;
+      background-position: 0% 40%;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -9999;
+      top: 100%;
+      left: 0;
+      width: 50vw;
+      height: 15vh;
+      background-color: transparent;
+      background-color: #424242;
+    }
+
+    .title_art_text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 5%;
+      width: 400px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px 30px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      &>h1 {
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        border-bottom: rgb(204, 146, 39) 5px solid;
+      }
+      &>p {
+        line-height: 5vh;
+        font-size: 18px;
+        margin-top: 30px;
+        color: #fff;
+      }
+    }
+  }
+  
+  &>p {
+    padding: 0 5vh;
+  }
+  .home_content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    margin-top: 10vh;  
+    background-color: #ddd;  
+
+    .content_info {
+      width: 100%;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      .posts {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        color: #fff;
+  
+        background-color: #424242;
+        &>h1 {
+          margin: 0 auto;
+          margin-top: 50px;
+          margin-bottom: 30px;
+          text-align: center;
+          color: #fff;
+          font-size: 30px;
+          text-transform: none;
+          span {
+            border-bottom: rgb(204, 146, 39) 5px solid;
+          }
+        }
+        .post {
+          margin: 40px 30px;
+          padding: 10px 20px;
+          background-color: rgba(0,0,0,0.1);
+          &>h2 {
+            text-transform: uppercase;
+            font-size: 20px;
+            text-align: left;
+            margin-left: 20px;
+            a {
+              color: rgb(204, 146, 39);
+            }
+          }
+          &>h4 {
+            font-size: 14px;
+            text-align: left;
+            margin: 5px;
+            a {
+              color: rgb(204, 146, 39);
+              text-decoration: none;
+            }
+          }
+          &>p {
+            color: #fff;
+            text-align: left;
+            margin: 20px 20px;
+          }
+        }
+
+        &>button {
+          align-self: center;
+          width: 200px;
+          height: 35px;
+          background-color: rgb(204, 146, 39);
+          border: none;
+          color: #fff;
+          border-radius: 5px;
+
+          &:hover {
+            filter: brightness(105%);
+          }
+        }
+      }
+
+      .circled_info_part {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+        .subcategories {
+          width: 90%;
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 2vw;
+          .subcategory {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin:  1.75vw;
+            .name {
+              a {
+                color: rgb(204, 146, 39);
+                font-size: 20px;
+              }
+            }
+            .name, .lastPost {
+              display: grid;
+              place-items: center;
+            }
+            .description {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .content_circle {
+          display: grid;
+          place-items: center;
+          font-size: 70px;
+          width: 200px;
+          height: 200px;
+          border-radius: 180px;
+          margin-top: 2vw;
+          border: rgb(62, 110, 59) 5px solid;
+        }
+        h1 {
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+        &>p {
+          font-size: 16px;
+          background-color: rgba(0,0,0,0.05);
+        }
+        h1, p {
+          margin: 0 2vw;
+          padding: 5vh 2vw;
+          color: #424242;
+        }
+      }
+      #infopart1 {
+        grid-column: 2;
+        grid-row: 1;
+        .content_circle {
+          background: url("/assets/pictures/grzyb2.jpg") no-repeat;
+          background-size: cover;
+        }
+      }
+      #infopart2 {
+        grid-column: 2;
+        grid-row: 2;
+        .content_circle {
+          background: url("/assets/pictures/grzyb1.jpg") no-repeat;
+          background-size: cover;
+        }
+      }
+      #infopart3 {
+        grid-column: 2;
+        grid-row: 3;
+        .content_circle {
+          background: url("/assets/pictures/grzyb3.jpg") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+body {
+  background-color: #ddd;
+  footer {
+    position: relative;
+    background-color: #ddd;
+  }
+}

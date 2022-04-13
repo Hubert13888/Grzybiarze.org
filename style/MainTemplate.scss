@@ -1,0 +1,83 @@
+.mainTemplate {
+  display: grid;
+  grid-template-rows: 0 3fr 100px;
+  nav {
+    display: grid;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    grid-template-columns: 2fr 5fr 2fr;
+
+    background-color: rgba(44, 44, 44, 0.9);
+    border-bottom: rgba(0, 0, 0, 0.3) 2px solid;
+
+    .topNavLogo {
+      grid-column: 1;
+      display: grid;
+      place-items: center;
+
+      .logo{
+        height:50px;
+      }
+    }
+    .topNavOptions {
+      grid-column: 2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: transparent;
+      a {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        padding-left: 5vw;
+        text-decoration: none;
+        .topNavOption {
+          height: 100%;
+          border: none;
+          color:#ddd;
+  
+          &:hover {
+            border-bottom: rgb(204, 146, 39) 2px solid;
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+    .topNavActions {
+      grid-column: 3;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      a:hover .loginButton{
+        color: rgb(204, 146, 39);
+      }
+
+      .loginButton{
+        margin:10%;
+        height: 80%;
+        width: 120%;
+        border: none;
+        background-color: transparent;
+        color: #ddd;
+      }
+    }
+  }
+  main {
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+  }
+  footer {
+    grid-row: 3;
+    display: grid;
+    place-items: center;
+    color: #333;
+    font-size: 14px;
+    span {
+      color: rgb(204, 146, 39);//rgb(62, 110, 59);
+      font-weight: bold;
+    }
+  }
+}
